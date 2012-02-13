@@ -48,4 +48,4 @@ CrossDomain.prototype.replaceContent = function(){
 			callback();
 		}
 	});
-}
+};

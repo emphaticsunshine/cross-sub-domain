@@ -23,7 +23,7 @@
 		<script type="text/javascript" src="includes/js/cross-domain.js"></script>
 		<script>
 			$(function(){
-				var cd = new CrossDomain($("#content"),$("#replace-content"),"iframe.html",CrossDomain.replaceContent);
+				var cd = new CrossDomain($("#content"),$("#replace-content"),'domain.com',"iframe.html",CrossDomain.replaceContent);
 				$("#get-content").bind('click',function(){
 					cd.getFrameContent();
 				});

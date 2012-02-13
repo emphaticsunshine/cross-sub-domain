@@ -14,4 +14,4 @@ Proposed Solution:
 	Use a hidden iframe in a running app.
 	The trick behind iframe to get sub domain content is to initialize "document.domain" using javascript to the same domains on both side.
 	Get content into iframe and replace those contents to running target location.
-	Created a very easy to use function to perform this operation. Developer has to write a single line in code to initialize the plugin.
+	Created a very easy to use function to perform this operation. Developer has to write a single line in code to initialize the plugin

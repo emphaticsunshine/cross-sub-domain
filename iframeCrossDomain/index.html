@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Iframe Cross Domain Example</title>
+	</head>	
+	<body>
+		<form>
+			<p>
+				This will illustrate how cross sub domain can be implemented using iframe.
+			</p>
+			<p>
+				Clicking on this button will get content from iframe.
+			</p>
+			<button id="get-content" type="button">Get Content</button>
+		</form>
+		<iframe id="content" style="display:none;">
+			
+		</iframe>
+		<div id="replace-content">
+			
+		</div>
+		<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+		<script type="text/javascript" src="includes/js/cross-domain.js"></script>
+		<script>
+			$(function(){
+				var cd = new CrossDomain($("#content"),$("#replace-content"),"iframe.html",CrossDomain.replaceContent);
+				$("#get-content").bind('click',function(){
+					cd.getFrameContent();
+				});
+			});
+		</script>
+	</body>
+</html>
